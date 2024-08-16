@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('../img/fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Fixa a imagem de fundo */
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    
+
+}
+
+header {
+    width: 100%;
+    max-width: 600px;
+}
+
+header img {
+    height: 150px; /* Ajuste a altura para telas menores */
+    width: auto;
+    object-fit: cover;
+}
+
+.itens {
+    display: flex;
+    flex-direction: column;
+    background: rgba(197, 197, 197, 0.5);
+    padding: 20px; /* Ajuste o padding */
+    border-radius: 20px;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 90%; /* Garante que o bloco se ajuste à largura da tela */
+}
+
+.item {
+    margin: 10px 0; /* Espaço vertical entre os links */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 15px 30px; /* Ajuste o padding */
+    margin: 8px 0; /* Espaço vertical entre os links */
+    border-radius: 30px;
+    display: block; /* Garante que o link ocupe o espaço adequado */
+}
+
+/* Media queries para diferentes tamanhos de tela */
+
+/* Para telas menores que 600px (celulares) */
+@media (max-width: 600px) {
+    body {
+        margin: 0px 10px;
+    }
+    header img {
+        margin-top: 80px;
+        height: 100px; /* Menor altura para o logo */
+    }
+
+    .itens {
+        padding: 15px; /* Menos padding em telas menores */
+    }
+
+    .item a {
+        font-size: 1rem; /* Menor tamanho da fonte */
+        padding: 8px 16px; /* Menor padding */
+    }
+}
+
+/* Para telas entre 600px e 900px (tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+    header img {
+        height: 130px; /* Ajuste a altura para tablets */
+    }
+
+    .itens {
+        padding: 20px; /* Ajuste o padding */
+    }
+
+    .item a {
+        font-size: 1.2rem; /* Ajuste o tamanho da fonte */
+        padding: 10px 20px; /* Ajuste o padding */
+    }
+}
